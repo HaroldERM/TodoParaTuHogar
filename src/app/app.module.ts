@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, MatTabsModule],
+  exports: [MatTabsModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
 })
