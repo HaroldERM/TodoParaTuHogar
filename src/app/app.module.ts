@@ -12,6 +12,6 @@ import { TabsComponent } from './tabs.component';
   imports: [BrowserModule, FormsModule, MatTabsModule],
   exports: [MatTabsModule],
   declarations: [AppComponent, LoginComponent, TabsComponent],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
