@@ -1,28 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from './firebase.service';
+import { UserInfo } from './login.component';
 
 @Component({
   selector: 'app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit {
-  title = 'firebase-angular-auth';
-  isSignedIn = false;
+export class AppComponent {
+  email: string;
+  password: string;
+
   constructor(public firebaseService: FirebaseService) {}
-  ngOnInit() {
-    if (localStorage.getItem('user') !== null) this.isSignedIn = true;
-    else this.isSignedIn = false;
+
+  signup() {
+    this.firebaseService.signup(this.email, this.password);
+    this.email = '';
+    this.password = '';
   }
-  async onSignup(email: string, password: string) {
-    await this.firebaseService.signup(email, password);
-    if (this.firebaseService.isLoggedIn) this.isSignedIn = true;
+
+  signup() {
+    this.firebaseService.signup(this.email, this.password);
+    this.email = '';
+    this.password = '';
   }
-  async onSignin(email: string, password: string) {
-    await this.firebaseService.signin(email, password);
-    if (this.firebaseService.isLoggedIn) this.isSignedIn = true;
-  }
-  handleLogout() {
-    this.isSignedIn = false;
+
+  logout() {
+    this.firebaseService.logout();
   }
 }

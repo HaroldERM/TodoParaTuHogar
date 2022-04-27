@@ -1,31 +1,62 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Observable } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root',
-})
-export class FirebaseService {
-  isLoggedIn = false;
-  constructor(public firebaseAuth: AngularFireAuth) {}
-  async signin(email: string, password: string) {
-    await this.firebaseAuth
-      .signInWithEmailAandPassword(email, password)
+@Injectable()
+export class AuthService {
+  user: Observable<any>;
+
+  constructor(private firebaseAuth: AngularFireAuth) {
+    this.user = firebaseAuth.authState;
+  }
+
+  // Register
+  register(email: string, password: string): any {
+    this.firebaseAuth
+      .createUserWithEmailAndPassword(email, password)
       .then((res) => {
-        this.isLoggedIn = true;
-        localStorage.setItem('user', JSON.stringify(res.user));
+        console.log('Successfully signed up!', res);
+      })
+      .catch((error) => {
+        console.log('Something went wrong', error.message);
       });
   }
 
-  async signup(email: string, password: string) {
-    await this.firebaseAuth
-      .createUserWithEmailAandPassword(email, password)
+  // Login
+  login(email: string, password: string): any {
+    this.firebaseAuth
+      .signInWithEmailAndPassword(email, password)
       .then((res) => {
-        this.isLoggedIn = true;
-        localStorage.setItem('user', JSON.stringify(res.user));
+        console.log('Successfully signed in!', res);
+      })
+      .catch((err) => {
+        console.log('Something went wrong', err.message);
       });
   }
-  logout() {
+
+  // Logout
+  logout(): void {
     this.firebaseAuth.signOut();
-    localStorage.removeItem('user');
+  }
+
+  getUserId(): any {
+    return this.firebaseAuth.authState.pipe(
+      Map((each) => {
+        return each.uid;
+      })
+    );
+  }
+
+  deleteAccount(): void {
+    this.fireAuth.authState.subscribe((authState) => {
+      authState
+        .delete()
+        .then((res) => {
+          console.log('Successfully deleted user', res);
+        })
+        .catch((error) => {
+          console.log('Something went wrong', error.message);
+        });
+    });
   }
 }
