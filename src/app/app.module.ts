@@ -25,7 +25,7 @@ import { CartComponent } from './cart.component';
       projectId: "todoparatuhogar-ed9a6",
       storageBucket: "todoparatuhogar-ed9a6.appspot.com",
       messagingSenderId: "616941008723",
-      appId: "1:616941008723:web:dfeb6c124aacf1a365d3a6")
+      appId: "1:616941008723:web:dfeb6c124aacf1a365d3a6"),
   ],
   providers: [
     FirebaseService
