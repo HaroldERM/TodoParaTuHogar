@@ -13,14 +13,14 @@ export class AppComponent {
 
   constructor(public firebaseService: FirebaseService) {}
 
-  signup() {
-    this.firebaseService.signup(this.email, this.password);
+  register() {
+    this.firebaseService.register(this.email, this.password);
     this.email = '';
     this.password = '';
   }
 
-  signup() {
-    this.firebaseService.signup(this.email, this.password);
+  login() {
+    this.firebaseService.login(this.email, this.password);
     this.email = '';
     this.password = '';
   }

@@ -11,11 +11,11 @@ export class AuthService {
   }
 
   // Register
-  register(email: string, password: string): any {
-    this.firebaseAuth
+  register(email: string, password: string) {
+    this.firebaseAuth.auth
       .createUserWithEmailAndPassword(email, password)
-      .then((res) => {
-        console.log('Successfully signed up!', res);
+      .then((value) => {
+        console.log('Successfully signed up!', value);
       })
       .catch((error) => {
         console.log('Something went wrong', error.message);
@@ -23,14 +23,14 @@ export class AuthService {
   }
 
   // Login
-  login(email: string, password: string): any {
-    this.firebaseAuth
+  login(email: string, password: string) {
+    this.firebaseAuth.auth
       .signInWithEmailAndPassword(email, password)
-      .then((res) => {
-        console.log('Successfully signed in!', res);
+      .then((value) => {
+        console.log('Successfully signed in!', value);
       })
-      .catch((err) => {
-        console.log('Something went wrong', err.message);
+      .catch((error) => {
+        console.log('Something went wrong', error.message);
       });
   }
 

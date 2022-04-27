@@ -7,6 +7,7 @@ import { FirebaseService } from './firebase.service';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login.component';
+import { LoginComponent2 } from './login-transition.component';
 import { TabsComponent } from './tabs.component';
 import { AboutUsComponent } from './about-us.component';
 import { ProductsComponent } from './products.component';
@@ -31,6 +32,7 @@ import { CartComponent } from './cart.component';
   declarations: [
     AppComponent,
     LoginComponent,
+    LoginComponent2,
     TabsComponent,
     AboutUsComponent,
     ProductsComponent,
