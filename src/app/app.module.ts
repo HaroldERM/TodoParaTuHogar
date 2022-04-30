@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register-login-auth/register.component';
 import { LoginComponent } from './register-login-auth/login.component';
 import { TabsComponent } from './tabs/tabs.component';
@@ -18,6 +19,7 @@ import { CartComponent } from './tabs/cart.component';
   declarations: [
     AppComponent,
     HomeComponent,
+    FooterComponent,
     RegisterComponent,
     LoginComponent,
     TabsComponent,
