@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register-login-auth/register.component';
@@ -13,8 +15,17 @@ import { ProductsComponent } from './tabs/products.component';
 import { AddProductComponent } from './tabs/add-product.component';
 import { CartComponent } from './tabs/cart.component';
 
+import { environment } from '../environments/environment';
+
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+  ],
   declarations: [
     AppComponent,
     RegisterComponent,
