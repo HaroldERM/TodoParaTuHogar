@@ -1,6 +1,56 @@
-<form>
-  <div class="form-group">
-    <label for="exampleFormControlFile1">Example file input</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1" />
-  </div>
-</form>
+<div class="container">
+  <form>
+    <div style="margin-bottom: 20px; font-size: 40px ; text-align: center">
+      Agregar Artículo
+    </div>
+    <!-- Nombre input -->
+    <div style="margin-bottom: 15px">
+      <input
+        style="border: 2px solid black; border-radius: 0px"
+        placeholder="Nombre (ejemplo: Abanico)"
+        type="text"
+        id="formNombre"
+        class="form-control"
+      />
+    </div>
+    <!-- Precio input -->
+    <div style="margin-bottom: 15px">
+      <input
+        style="border: 2px solid black; border-radius: 0px"
+        placeholder="Precio (ejemplo: 14000)"
+        type="number"
+        id="formPrecio"
+        class="form-control"
+      />
+    </div>
+    <!-- Fecha input -->
+    <div style="margin-bottom: 15px">
+      <input
+        style="border: 2px solid black; border-radius: 0px"
+        placeholder="Fecha de ingreso (ejemplo: 30/05/2022)"
+        type="text"
+        id="formFecha"
+        class="form-control"
+      />
+    </div>
+
+    <!-- Descripción input -->
+    <div style="margin-bottom: 15px">
+      <textarea
+        style="resize: none; height: 100px; width: 377px; border: 2px solid black; border-radius: 0px"
+        placeholder="Descripción"
+        id="formDesc"
+        class="form-control"
+      ></textarea>
+    </div>
+
+    <!-- Submit button -->
+    <button
+      class="form-control"
+      style="margin-bottom: 15px; border-radius: 0px; background-color: black; color: white "
+      type="button"
+    >
+      Agregar Artículo
+    </button>
+  </form>
+</div>
