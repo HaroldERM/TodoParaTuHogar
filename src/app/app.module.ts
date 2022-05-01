@@ -24,7 +24,7 @@ import { environment } from '../environments/environment';
     ReactiveFormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
+    AngularFirestoreModule
   ],
   declarations: [
     AppComponent,

@@ -18,6 +18,7 @@
     "@firebase/app-types": "0.7.0",
     "@firebase/auth": "0.19.12",
     "@firebase/database": "0.12.8",
+    "@firebase/util": "^1.5.2",
     "firebase": "9.7.0",
     "firebase-tools": "10.7.2",
     "process": "0.11.10",
