@@ -4,10 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register-login-auth/register.component';
 import { LoginComponent } from './register-login-auth/login.component';
+import { PasswordComponent } from './register-login-auth/password.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { AboutUsComponent } from './tabs/about-us.component';
 import { ProductsComponent } from './tabs/products.component';
@@ -18,10 +17,9 @@ import { CartComponent } from './tabs/cart.component';
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   declarations: [
     AppComponent,
-    HomeComponent,
-    FooterComponent,
     RegisterComponent,
     LoginComponent,
+    PasswordComponent,
     TabsComponent,
     AboutUsComponent,
     ProductsComponent,

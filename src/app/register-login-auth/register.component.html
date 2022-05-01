@@ -1,53 +1,64 @@
-<form>
-<!-- Email input -->
-<div class="form-outline mb-4">
-  <input type="email" id="form2Example1" class="form-control" />
-  <label class="form-label" for="form2Example1">Email address</label>
-</div>
-
-<!-- Password input -->
-<div class="form-outline mb-4">
-  <input type="password" id="form2Example2" class="form-control" />
-  <label class="form-label" for="form2Example2">Password</label>
-</div>
-
-<!-- 2 column grid layout for inline styling -->
-<div class="row mb-4">
-  <div class="col d-flex justify-content-center">
-    <!-- Checkbox -->
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-      <label class="form-check-label" for="form2Example31"> Remember me </label>
+<div class="container">
+  <form>
+    <div style="margin-bottom: 20px; font-size: 40px ; text-align: center">
+      Regístrate
     </div>
-  </div>
+    <!-- Nombre input -->
+    <div style="margin-bottom: 15px">
+      <input
+        style="border: 2px solid black; border-radius: 0px"
+        placeholder="Nombre"
+        type="email"
+        id="formNombre"
+        class="form-control"
+      />
+    </div>
+    <!-- Apellido input -->
+    <div style="margin-bottom: 15px">
+      <input
+        style="border: 2px solid black; border-radius: 0px"
+        placeholder="Apellido"
+        type="email"
+        id="formApellido"
+        class="form-control"
+      />
+    </div>
+    <!-- Email input -->
+    <div style="margin-bottom: 15px">
+      <input
+        style="border: 2px solid black; border-radius: 0px"
+        placeholder="Email"
+        type="email"
+        id="formEmail"
+        class="form-control"
+      />
+    </div>
 
-  <div class="col">
-    <!-- Simple link -->
-    <a href="#!">Forgot password?</a>
-  </div>
+    <!-- Password input -->
+    <div style="margin-bottom: 15px">
+      <input
+        style="border: 2px solid black; border-radius: 0px"
+        placeholder="Contraseña"
+        type="password"
+        id="formPassword"
+        class="form-control"
+      />
+    </div>
+
+    <!-- Submit button -->
+    <button
+      class="form-control"
+      style="margin-bottom: 15px; border-radius: 0px; background-color: black; color: white "
+      type="button"
+    >
+      Regístrate
+    </button>
+
+    <!-- Register buttons -->
+    <div class="text-center">
+      <p>
+        ¿Ya tienes una cuenta? <a routerLink="../login">Inicia tu sesion</a>
+      </p>
+    </div>
+  </form>
 </div>
-
-<!-- Submit button -->
-<button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
-
-<!-- Register buttons -->
-<div class="text-center">
-  <p>Not a member? <a href="#!">Register</a></p>
-  <p>or sign up with:</p>
-  <button type="button" class="btn btn-link btn-floating mx-1">
-    <i class="fab fa-facebook-f"></i>
-  </button>
-
-  <button type="button" class="btn btn-link btn-floating mx-1">
-    <i class="fab fa-google"></i>
-  </button>
-
-  <button type="button" class="btn btn-link btn-floating mx-1">
-    <i class="fab fa-twitter"></i>
-  </button>
-
-  <button type="button" class="btn btn-link btn-floating mx-1">
-    <i class="fab fa-github"></i>
-  </button>
-</div>
-</form>
